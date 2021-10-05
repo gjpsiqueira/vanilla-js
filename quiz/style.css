@@ -1,0 +1,84 @@
+body {
+    padding:0;
+    margin:0;
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.content {
+    max-width:940px;
+    margin: 10rem auto;
+}
+
+.question {
+    text-align:center;
+}
+
+.options {
+    display:flex;
+    flex-direction:column;
+    padding:0;
+    margin:0;
+
+}
+
+.options li {
+    width:100%;
+    list-style-type:none;
+    background:#000;
+    height:5rem;
+    cursor:pointer;
+    display:flex;
+    margin:5px;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    color:yellow;
+    border:2px solid #FFF;
+    position:relative;
+}
+
+.selected {
+    background-color: #ccccc0 !important;
+    color:#000 !important;
+}
+
+.disabled {
+    pointer-events:none;
+    opacity:0.7;
+}
+
+.wrapper {
+    display:flex;
+    justify-content:center;
+}
+
+.btn-next {
+    padding:10px 5px;
+    width:350px;
+    background:yellow;
+    border:none;
+    height:3rem;
+    font-size:24px;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+
+.checkmark {
+    display: none;
+    transform: rotate(45deg);
+    position:absolute;
+    right:0;
+    height: 25px;
+    width: 12px;
+    margin-right: 3%; 
+    border-bottom: 7px solid #78b13f;
+    border-right: 7px solid #78b13f;
+}
+
+.errorMessage {
+    text-align:center;
+    font-size:24px;
+}
