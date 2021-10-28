@@ -1,9 +1,13 @@
+/* Add your css styles here */
 :root {
     --primary-color: #F9F9F9;
     --secondary-color: #E3EFF6;
     --border-radius: 4px;
     --white: #FFF;
     --gray: #F1F1F1;
+    --border-color: #D6D6D6;
+    --red: #FF0000;
+    --messageColor: #888888
 }
 
 .container {
@@ -31,10 +35,12 @@ input[type="text"] {
     background: var(--primary-color);
     border-radius: var(--border-radius);
     border:none;
+    border-bottom: 2px solid var(--border-color)
 }
 
 input[type="text"]:focus {
     background: var(--secondary-color);
+    outline:none;
 }
 
 button {
@@ -62,15 +68,30 @@ li {
 
 .item {
     background: var(--gray);
+    border-radius: var(--border-radius);
     width:100%;
     height:3rem;
     display:flex;
     align-items:center;
     position:relative;
     overflow:hidden;
+    
 }
 
 .item-content {
     position:relative;
     padding:10px;
+}
+
+.item-content p {
+    font-size:14px;
+    font-weight:bold;
+}
+
+.error {
+    color: var(--red);
+}
+
+.message {
+    color: var(--messageColor);
 }
