@@ -44,4 +44,3 @@ function displayResults(wordToMatch,regex,matches) {
 
 fetchData()
 
-//console.log(search)
