@@ -1,0 +1,74 @@
+:root {
+    --color-blue: #0d6efd;
+    --color-white: #F9F9F9;
+    --color-gray: #6c757d;
+    --color-light: #f8f9fa;
+}
+
+* {
+    margin:0;
+    border:0;
+    padding:0;
+    box-sizing:border-box;
+    list-style:none;
+}
+
+main {
+    max-width:970px;
+    margin:10rem auto;
+}
+
+.tabs {
+    width:100%; 
+    border:2px solid var(--color-blue);
+    border-radius: 0.25rem;
+}
+
+ul.nav-tabs {
+    display:flex;
+    gap:30px;
+    border-bottom:1px solid var(--color-light);
+}
+
+ul.nav-tabs > .nav-item {
+    padding: 0.5rem 1rem;
+    font-size:1.2rem;
+    color: var(--color-blue);
+    transition: all 0.6s;
+    cursor:pointer;
+}
+
+ul.nav-tabs > .nav-item:hover {
+    background: var(--color-light);
+}
+
+ul.nav-tabs > .nav-item.active {
+    background: var(--color-blue);
+    color: var(--color-white);
+}
+
+.tab-content {
+    padding:8px;
+    color: var(--color-gray);
+}
+
+.tab-content > .tab-pane.show {
+    display:block;
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.6s;
+}
+.tab-content > .tab-pane {
+    display:none;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
